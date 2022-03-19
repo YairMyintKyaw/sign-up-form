@@ -1,0 +1,226 @@
+@font-face {
+    font-family: cool-font;
+    src: url(Norse-Bold.otf);
+}
+
+
+
+:root{
+    --create-acc-bg:#596D48;
+    --input-border:#E5E7EB;
+    --focus--valid--border:blue;
+    --invalid-border:red;
+    font-family: RussischSansRegular,'Times New Roman', Times, serif;
+    font-size: 15px;
+}
+
+*{
+    margin: 0;
+    padding:0;
+}
+
+body{
+    display: flex;
+    flex-flow: row wrap;
+    width: 100vw;
+    height: 100vh;
+    overflow-x:hidden ;
+}
+
+
+
+
+
+/* Left side */
+.leftSide{
+    width: 40%;
+    background-image: url(halie-west-25xggax4bSA-unsplash.jpg); 
+    background-size:cover;
+    position: relative;
+}
+
+.leftSide > div:first-child{
+    background-color: rgba(0, 0, 0, .5);
+    position: relative;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 10rem;
+}
+
+.odinLogo > img{
+    height: 90%;
+}
+
+.odinLogo > span{
+    font-size: 5rem;
+    color:whitesmoke;
+    font-family: cool-font;
+}
+
+.leftSide > div:last-child{
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+    width: 100%;
+    color: whitesmoke;
+}
+
+.credit > a:link,.credit> a:visited {
+    color:inherit;
+}
+
+/* Right side */
+.rightSide{
+    width:60%;
+    background-color:#fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.rightSide > div {
+    font-size: calc(.9rem + 1vmin);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: calc(.1rem + 1vmin);
+}
+
+
+header > p{
+    line-height: 1.5rem;
+    word-spacing: .4rem;
+    font-weight: 700;
+    padding: 0 25px;
+
+}
+
+.form{
+    width: 100%;
+    background-color: #ffffff;
+}
+
+form > div > h1 {
+    font-size: calc(1rem + 1vmin)
+}
+
+form > div:first-child{
+    display: flex;
+    flex-direction: column;
+    gap:calc(10px + 1vmin);
+    padding: 25px;
+    box-shadow: 5px .2rem 20px #E5E7EB ;
+}
+
+.inputContainer{
+    display: flex;
+    gap: 4rem;
+    font-size: .6rem;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+    color: #515357;
+}
+
+.inputContainer label{
+    display: block;
+    margin-bottom: 1px;
+}
+
+.inputContainer input{
+    appearance: none;
+    -webkit-appearance: none;
+    border: solid 1px var(--input-border);
+    border-radius: 5px;
+    width: 100%;
+    height: 25px;
+    padding: 1px 10px;
+}
+
+/* indicate invalid */
+.invalid{
+    outline: solid 1px red;
+}
+
+.valid{
+    outline: solid 1px green;
+}
+
+/* invalid message */
+.inputContainer > div > div:last-child{
+    color:red;
+    display: none;
+    margin: 5px;
+}
+
+
+
+.inputContainer input:focus{
+    box-shadow: 1px .3rem 10px #E5E7EB ;
+
+}
+
+form > div:last-child{
+    padding: 0 25px;
+    font-size: .9rem;
+}
+
+form > div:last-child > button {
+    padding: 8px 25px;
+    background-color: var(--create-acc-bg);
+    color: #E5E7EB;
+    font: inherit;
+    border: solid 1px var(--input-border);
+    border-radius: 5px;
+    font-weight: 550;
+    margin: 20px;
+    cursor: pointer;
+}
+
+form > div:last-child > button:hover {
+    background-color: #647c50;
+}
+
+form > div:last-child > div {
+    padding: 0 25px;
+}
+
+form > div:last-child > div > a:visited {
+    color: inherit;
+}
+
+
+
+@media (max-width:700px){
+    .leftSide{
+        width: 100%;
+        height: 100vh;
+    }
+    .rightSide{
+        width: 100%;
+        padding: 30px 10px;
+        align-items: center;
+    }
+
+    .inputContainer{
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .inputContainer input{
+        width: 50vw;
+    }
+
+    form > div:first-child > h1{
+        text-align: center;
+    }
+
+    form > div:last-child{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+

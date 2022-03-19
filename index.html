@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Form</title>
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/russisch-sans" type="text/css"/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="leftSide">
+        <div class="odinLogo">
+            <img src='/odin-lined.png'>
+            <span>ODIN</span>
+        </div>
+        <div class="credit">
+            Photo by <a href="https://unsplash.com/@haliewestphoto">Halie West</a>
+            on <a href="https://unsplash.com/photos/25xggax4bSA">unsplash</a>
+        </div>
+    </div>
+    <div class="rightSide">
+        <!-- <div class="rightInnerContainer"> -->
+            <header class="header">
+                <p>
+                    This is not a real online service! You know you need something<br>
+                    like this in your life to help you realize your deepest dreams.<br>
+                    Sign up now to get started.<br><br>
+
+                    You <em>know</em> you want to.
+                </p>
+
+            </header>
+            <div class="form">
+                <form action="index.html" method="get" id="formId">
+                    <div>
+                        <h1>Let's do this!</h1>
+                        <div class="inputContainer">
+                            <div>
+                                <label for="firstname">FIRST NAME </label>
+                                <input type="text" name="firstname" id="firstname" required>
+                                <div>PLEASE ENTER YOUR FIRST NAME</div>
+                            </div>
+                            <div>
+                                <label for="lastname">LAST NAME </label>
+                                <input type="text" name="lastname" id="lastname" required>
+                                <div>PLEASE ENTER YOUR LAST NAME</div>
+                            </div>
+                        </div>
+                        <div class="inputContainer">
+                            <div>
+                                <label for="email">EMAIL</label>
+                                <input type="email" name="email" id="email" required>
+                                <div>PLEASE ENTER YOUR EMAIL</div>
+                            </div>
+                            <div>
+                                <label for="phonenumber">PHONE NUMBER </label>
+                                <input type="tel" name="phonenumber" id="phonenumber"  minlength="7" maxlength="15"  pattern="[0-9+]+" required>
+                                <div>PLEASE ENTER YOUR PHONE NUMBER</div>
+                            </div>
+                        </div>
+                        <div class="inputContainer">
+                            <div>
+                                <label for="password">PASSWORD</label>
+                                <input type="password" name="password" id="password" required >
+                                <div>PLEASE ENTER YOUR PASSWORD</div>
+                            </div>
+                            <div>
+                                <label for="confirmpassword">CONFIRM PASSWORD </label>
+                                <input type="password" name="confirmpassword" id="confirmpassword" required>
+                                <div>PLEASE CONFIRM YOUR PASSWORD </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div>
+                        <button type="submit" form="formId">Create Account</button>
+                        <div>Already have an account? <a href="">Log in</a></div>
+                    </div>
+                </form>
+            </div>
+        <!-- </div> -->
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
